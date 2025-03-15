@@ -58,7 +58,9 @@ export default function Landing() {
         </button>
         <button
           className="group px-8 py-4 bg-green-600 text-white rounded-lg shadow-lg hover:bg-green-700 transition-all duration-200 text-lg font-semibold min-w-[200px] hover:scale-105"
-          onClick={() => {}}
+          onClick={() => {
+            router.push("/doctorDashboard");
+          }}
         >
           <span className="flex items-center justify-center gap-2">
             <svg
