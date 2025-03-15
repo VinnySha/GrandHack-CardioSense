@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 export default function Landing() {
   return (
@@ -23,7 +23,8 @@ export default function Landing() {
         </div>
         <h1 className="text-4xl font-bold text-gray-800 mb-4">CardioSense</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto px-4">
-          Comprehensive cardiac health monitoring and analysis for better healthcare decisions
+          Comprehensive cardiac health monitoring and analysis for better
+          healthcare decisions
         </p>
       </div>
 
