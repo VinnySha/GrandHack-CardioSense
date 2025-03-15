@@ -1,14 +1,15 @@
 "use client";
 import { useRouter } from "next/navigation";
+import "../styles/landing.css"; // Import the CSS file
 
 export default function Landing() {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex flex-col items-center justify-center p-4">
-      <div className="text-center mb-12">
+    <div className="landing-container">
+      <div className="landing-title">
         {/* Heart Icon */}
-        <div className="mb-6 text-red-500 animate-pulse">
+        <div className="landing-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-16 w-16 mx-auto"
@@ -33,7 +34,7 @@ export default function Landing() {
 
       <div className="flex flex-col sm:flex-row gap-6">
         <button
-          className="group px-8 py-4 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-200 text-lg font-semibold min-w-[200px] hover:scale-105"
+          className="landing-button landing-button-patient"
           onClick={() => {
             router.push("/patientDashboard");
           }}
@@ -57,7 +58,7 @@ export default function Landing() {
           </span>
         </button>
         <button
-          className="group px-8 py-4 bg-green-600 text-white rounded-lg shadow-lg hover:bg-green-700 transition-all duration-200 text-lg font-semibold min-w-[200px] hover:scale-105"
+          className="landing-button landing-button-doctor"
           onClick={() => {
             router.push("/doctorDashboard");
           }}

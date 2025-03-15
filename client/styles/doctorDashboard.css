@@ -1,0 +1,37 @@
+/* doctorDashboard.css */
+.dashboard-container {
+  padding: 1.5rem;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.table {
+  min-width: 100%;
+  background-color: white;
+  border: 1px solid #d1d5db; /* Gray-300 */
+}
+
+.table-header {
+  background-color: #e5e7eb; /* Gray-200 */
+}
+
+.table-header th {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #d1d5db; /* Gray-300 */
+}
+
+.table-body tr {
+  border-bottom: 1px solid #d1d5db; /* Gray-300 */
+}
+
+.table-body td {
+  padding: 0.5rem 1rem;
+}
