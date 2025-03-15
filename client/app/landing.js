@@ -1,6 +1,9 @@
 "use client";
+import { useRouter } from "next/navigation";
 
 export default function Landing() {
+  const router = useRouter();
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex flex-col items-center justify-center p-4">
       <div className="text-center mb-12">
@@ -31,7 +34,9 @@ export default function Landing() {
       <div className="flex flex-col sm:flex-row gap-6">
         <button
           className="group px-8 py-4 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-200 text-lg font-semibold min-w-[200px] hover:scale-105"
-          onClick={() => {}}
+          onClick={() => {
+            router.push("/patientDashboard");
+          }}
         >
           <span className="flex items-center justify-center gap-2">
             <svg
