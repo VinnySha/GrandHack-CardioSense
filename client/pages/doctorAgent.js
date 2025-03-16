@@ -1,11 +1,27 @@
 // doctorAgent.js
-import React from "react";
+import React, { useState } from "react"; // Import useState
+import { useRouter } from "next/navigation"; // Import useRouter
 import "../styles/doctorAgent.css"; // Import a CSS file for styling
 
 export default function DoctorAgent() {
+  const router = useRouter(); // Initialize the router
+  const [showTextBox, setShowTextBox] = useState(false); // State to manage text box visibility
+
+  const handleGenerateReport = () => {
+    setShowTextBox(true); // Show the text box when the button is clicked
+  };
+
   return (
     <div className="doctor-agent-container">
-      <h1 className="patient-overview-title">Patient Overview</h1>
+      <div className="button-container">
+        <button
+          onClick={() => router.push("/doctorDashboard")} // Navigate to the doctorDashboard page
+          className="back-button" // Add a class for styling
+        >
+          Back to Doctor Dashboard
+        </button>
+      </div>
+      <h1 className="patient-overview-title">John Doe</h1>
       <div className="patient-details">
         <h2>Patient Condition:</h2>
         <p>Hypertension, Diabetes</p>
@@ -46,6 +62,21 @@ export default function DoctorAgent() {
           </tbody>
         </table>
       </div>
+
+      {/* Button to generate summary report */}
+      <button className="generate-report-button" onClick={handleGenerateReport}>
+        Generate Summary Report
+      </button>
+
+      {/* Conditionally render the text box */}
+      {showTextBox && (
+        <input
+          type="text"
+          className="summary-input"
+          readOnly
+          placeholder="Summary will be generated here..."
+        />
+      )}
     </div>
   );
 }

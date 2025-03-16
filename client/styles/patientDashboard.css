@@ -1,0 +1,53 @@
+/* patientDashboard.css */
+.patient-dashboard-container {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.patient-info {
+  margin-bottom: 2rem;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table th,
+.history-table td {
+  border: 1px solid #d1d5db; /* Gray-300 */
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.history-table th {
+  background-color: #e5e7eb; /* Gray-200 */
+}
+
+/* patientDashboard.css */
+.question-input {
+  width: 100%; /* Full width */
+  padding: 0.75rem; /* Padding for the input */
+  border: 1px solid #d1d5db; /* Gray border */
+  border-radius: 0.5rem; /* Rounded corners */
+  margin-top: 1rem; /* Space above the input */
+  font-size: 1rem; /* Font size */
+}
+
+.messages-container {
+  margin-top: 1rem; /* Space above messages */
+}
+
+.message {
+  background-color: #f8f9fa; /* Light background for messages */
+  padding: 0.5rem; /* Padding for messages */
+  border-radius: 0.5rem; /* Rounded corners */
+  margin-bottom: 0.5rem; /* Space between messages */
+}

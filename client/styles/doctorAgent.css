@@ -1,9 +1,17 @@
 /* doctorAgent.css */
+
 .doctor-agent-container {
   padding: 1.5rem;
   background-color: #ffffff;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Make this container relative for absolute positioning */
+}
+
+.button-container {
+  position: absolute; /* Position the button container absolutely */
+  top: 1rem; /* Adjust as needed */
+  right: 1rem; /* Adjust as needed */
 }
 
 .patient-overview-title {
@@ -38,4 +46,57 @@
 
 .date-table th {
   background-color: #e5e7eb; /* Gray-200 */
+}
+
+.back-button {
+  padding: 1rem 2rem; /* Match the padding from landing.css */
+  border-radius: 0.5rem; /* Rounded corners */
+  font-weight: bold; /* Bold font */
+  background-color: #007bff; /* Primary color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth transition */
+  margin-bottom: 1.5rem; /* Space below the button */
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.generate-report-button {
+  padding: 1rem 2rem; /* Match the padding from landing.css */
+  border-radius: 0.5rem; /* Rounded corners */
+  font-weight: bold; /* Bold font */
+  background-color: #28a745; /* Green color for the report button */
+  color: white; /* Text color */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth transition */
+  margin-top: 2rem; /* Space above the button */
+}
+
+.generate-report-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.summary-input {
+  width: 100%; /* Full width */
+  padding: 0.75rem; /* Padding for the input */
+  border: 1px solid #d1d5db; /* Gray border */
+  border-radius: 0.5rem; /* Rounded corners */
+  margin-top: 1rem; /* Space above the input */
+  font-size: 1rem; /* Font size */
+}
+
+.summary-textarea {
+  width: 100%; /* Full width */
+  height: 100px; /* Set a height for the text area */
+  padding: 0.75rem; /* Padding for the textarea */
+  border: 1px solid #d1d5db; /* Gray border */
+  border-radius: 0.5rem; /* Rounded corners */
+  margin-top: 1rem; /* Space above the textarea */
+  font-size: 1rem; /* Font size */
+  background-color: #f8f9fa; /* Light background color */
+  color: #343a40; /* Dark text color */
 }
