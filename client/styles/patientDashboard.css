@@ -51,3 +51,19 @@
   border-radius: 0.5rem; /* Rounded corners */
   margin-bottom: 0.5rem; /* Space between messages */
 }
+
+.back-button {
+  padding: 1rem 2rem; /* Match the padding from landing.css */
+  border-radius: 0.5rem; /* Rounded corners */
+  font-weight: bold; /* Bold font */
+  background-color: #007bff; /* Primary color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth transition */
+  margin-bottom: 1.5rem; /* Space below the button */
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}

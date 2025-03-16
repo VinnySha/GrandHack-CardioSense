@@ -1,8 +1,10 @@
 // patientDashboard.js
 import React, { useState } from "react";
+import { useRouter } from "next/navigation"; // Import useRouter
 import "../styles/patientDashboard.css"; // Import a CSS file for styling
 
 export default function PatientDashboard() {
+  const router = useRouter(); // Initialize the router
   const [question, setQuestion] = useState(""); // State for the input question
   const [messages, setMessages] = useState([]); // State for storing messages
 
@@ -16,6 +18,12 @@ export default function PatientDashboard() {
   return (
     <div className="patient-dashboard-container">
       <h1 className="dashboard-title">Patient Dashboard</h1>
+      <button
+        onClick={() => router.push("/")} // Nacanvigate to the landing page
+        className="back-button" // Add a class for styling
+      >
+        Back to Landing Page
+      </button>
       <div className="patient-info">
         <h2>Patient Name: John Doe</h2>
       </div>
@@ -55,7 +63,6 @@ export default function PatientDashboard() {
         placeholder="Type your question and hit Enter..."
       />
 
-      {/* Display messages */}
       {/* Display messages */}
       <div className="messages-container">
         {messages.map((msg, index) => (
