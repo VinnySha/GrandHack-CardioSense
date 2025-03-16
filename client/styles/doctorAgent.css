@@ -1,11 +1,15 @@
 /* doctorAgent.css */
 
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
 .doctor-agent-container {
-  padding: 1.5rem;
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative; /* Make this container relative for absolute positioning */
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ebf8ff, #ffffff);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  font-family: "Lato", sans-serif;
+  animation: fadeIn 0.5s ease-out;
 }
 
 .button-container {
@@ -15,8 +19,17 @@
 }
 
 .patient-overview-title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #2d3748;
+  transition: transform 0.2s;
+  border-bottom: 2px solid #d1d5db;
+  padding-bottom: 1rem;
+}
+
+.patient-overview-title:hover {
+  transform: scale(1.01);
 }
 
 .patient-details {
@@ -35,6 +48,12 @@
 .date-table {
   width: 100%;
   border-collapse: collapse;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.date-table:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .date-table th,
@@ -48,15 +67,28 @@
   background-color: #e5e7eb; /* Gray-200 */
 }
 
+.back-button,
+.generate-report-button {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  min-width: 200px;
+  transition: transform 0.2s;
+  font-family: inherit;
+  font-size: 1.2rem;
+  animation: slideIn 0.5s ease-out;
+}
+
+.back-button:hover,
+.generate-report-button:hover {
+  transform: scale(1.05);
+}
+
 .back-button {
-  padding: 1rem 2rem; /* Match the padding from landing.css */
-  border-radius: 0.5rem; /* Rounded corners */
-  font-weight: bold; /* Bold font */
   background-color: #007bff; /* Primary color */
   color: white; /* Text color */
   border: none; /* No border */
   cursor: pointer; /* Pointer cursor */
-  transition: background-color 0.3s; /* Smooth transition */
   margin-bottom: 1.5rem; /* Space below the button */
 }
 
@@ -65,19 +97,21 @@
 }
 
 .generate-report-button {
-  padding: 1rem 2rem; /* Match the padding from landing.css */
-  border-radius: 0.5rem; /* Rounded corners */
-  font-weight: bold; /* Bold font */
   background-color: #28a745; /* Green color for the report button */
   color: white; /* Text color */
   border: none; /* No border */
   cursor: pointer; /* Pointer cursor */
-  transition: background-color 0.3s; /* Smooth transition */
   margin-top: 2rem; /* Space above the button */
 }
 
 .generate-report-button:hover {
   background-color: #218838; /* Darker green on hover */
+}
+
+.summary-input,
+.summary-textarea {
+  font-family: inherit;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .summary-input {
@@ -99,4 +133,31 @@
   font-size: 1rem; /* Font size */
   background-color: #f8f9fa; /* Light background color */
   color: #343a40; /* Dark text color */
+}
+
+.summary-input:focus,
+.summary-textarea:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.3);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

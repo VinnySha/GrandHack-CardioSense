@@ -25,16 +25,15 @@ export default function PatientDashboard() {
         Back to Landing Page
       </button>
       <div className="patient-info">
-        <h2>Patient Name: John Doe</h2>
+        <h2>John Doe</h2>
       </div>
-
       <div className="interaction-history">
-        <h2>Interaction History</h2>
+        <h2>AI Interaction History</h2>
         <table className="history-table">
           <thead>
             <tr>
               <th>Date</th>
-              <th>Description</th>
+              <th>Description of Interaction</th>
             </tr>
           </thead>
           <tbody>
@@ -53,7 +52,8 @@ export default function PatientDashboard() {
 
       {/* Text box for user input */}
       {/* Text box for user input */}
-      <label className="ai-label">Converse with your AI Agent</label>
+
+      <h1 className="ai-label">Converse with your AI Agent:</h1>
       <input
         type="text"
         className="question-input"

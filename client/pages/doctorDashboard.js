@@ -35,13 +35,13 @@ export default function DoctorDashboard() {
               <td>John Doe</td>
               <td>Hypertension, Diabetes</td>
               <td>BP: 145/90 mmHg, Pulse: 78 bpm</td>
-              <td>75%</td>
+              <td>25%</td>
             </tr>
             <tr onClick={() => handlePatientClick("Jane Smith")}>
               <td>Jane Smith</td>
               <td>Asthma, Obesity</td>
               <td>BP: 130/85 mmHg, Pulse: 82 bpm</td>
-              <td>65%</td>
+              <td>30%</td>
             </tr>
             <tr onClick={() => handlePatientClick("Michael Johnson")}>
               <td>Michael Johnson</td>
@@ -53,13 +53,13 @@ export default function DoctorDashboard() {
               <td>Emily Davis</td>
               <td>Arthritis, Anxiety</td>
               <td>BP: 120/75 mmHg, Pulse: 85 bpm</td>
-              <td>60%</td>
+              <td>35%</td>
             </tr>
             <tr onClick={() => handlePatientClick("David Lee")}>
               <td>David Lee</td>
               <td>Chronic Kidney Disease, Hypertension</td>
               <td>BP: 150/92 mmHg, Pulse: 88 bpm</td>
-              <td>85%</td>
+              <td>10%</td>
             </tr>
           </tbody>
         </table>
