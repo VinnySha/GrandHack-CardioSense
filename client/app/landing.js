@@ -82,6 +82,8 @@ export default function Landing() {
           </span>
         </button>
       </div>
+      {/* Footer */}
+      <footer className="landing-footer">Website made by Vineet Sharma</footer>
     </div>
   );
 }
